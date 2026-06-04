@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit - BLURIT</title>
+  <link rel="stylesheet" href="stylee.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- 상단 네비게이션 바 추가 -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="w_logo.png" alt="BLUR IT Logo" class="logo-img">
+    </div>
+    <ul class="nav-links">
+      <li><a href="indexx.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="editt.html" class="active">Edit</a></li>
+    </ul>
+  </nav>
+
+  <!-- 기존 Edit 내용 -->
+  <div class="edit-section">
+    <div class="image-box">
+      <img src="editp.jpg" alt="배경 이미지" class="fixed-bg">
+      <div class="edit-overlay">
+        <p>유해물질이 나온 영상을 업로드 해보세요.<br>
+          <strong>Blurit</strong>이 영상 속 모든 유해물질을 가려드립니다.
+        </p>
+        <label for="upload-input" class="upload-btn">
+          <i class="fas fa-cloud-upload-alt"></i> 파일 업로드
+        </label>
+        <input type="file" id="upload-input" hidden>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

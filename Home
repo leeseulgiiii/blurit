@@ -1,0 +1,81 @@
+import React, { useEffect } from "react";
+import "./Home.css";
+
+const Home = () => {
+  useEffect(() => {
+    const scrollBtn = document.getElementById("scroll-btn");
+    const handleScroll = () => {
+      if (window.scrollY > 580) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div>
+      <nav className="navbar">
+        <div className="logo">
+          <img src="w_logo.png" alt="BLUR IT Logo" className="logo-img" />
+        </div>
+        <ul className="nav-links">
+          <li><a href="#" className="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="/editt">Edit</a></li>
+        </ul>
+      </nav>
+
+      <div className="hero">
+        <h1>BLURIT으로 더 나은 시선을 만들어보세요.</h1>
+        <p>
+          BLURIT은 AI로 유해 요소를 자동으로 탐지하고,<br />
+          실시간 블러링 처리로 모두가 안심할 수 있는 콘텐츠를 만들어줍니다.
+        </p>
+        <a href="/editt" className="start-btn">블러링 시작하기</a>
+      </div>
+
+      <div className="blur-guide">
+        <div className="step">
+          <img src="firstp.jpg" alt="step1" />
+          <div className="text">
+            <h3>EDIT 메뉴에서 영상을 업로드</h3>
+          </div>
+        </div>
+        <div className="step reverse">
+          <img src="secondp.jpg" alt="step2" />
+          <div className="text">
+            <h3>가리고 싶은 유해물질을 선택하기</h3>
+          </div>
+        </div>
+        <div className="step">
+          <img src="thirdp.jpg" alt="step3" />
+          <div className="text">
+            <h3>선택한 유해물질 흐리게하기</h3>
+          </div>
+        </div>
+        <div className="step reverse">
+          <img src="forthp.jpg" alt="step4" />
+          <div className="text">
+            <h3>편집이 완료된 영상 다운로드하기</h3>
+          </div>
+        </div>
+        <div className="step">
+          <img src="fifthp.jpg" alt="step5" />
+          <div className="text">
+            <h3>영상 속 유해물질을 한번에 가리는 방법</h3>
+          </div>
+        </div>
+      </div>
+
+      <a href="/editt" className="floating-btn" id="scroll-btn">
+        블러링 시작하기
+      </a>
+    </div>
+  );
+};
+
+export default Home;
